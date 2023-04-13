@@ -1,0 +1,10 @@
+/dist
+/node_modules
+.DS_Store
+/coverage
+/.idea
+/yarn.lock
+/documentation/
+/src/.env
+.env
+/package-lock.json
