@@ -9,4 +9,14 @@ export class ImageDto {
     image_width: number;
 
     file: Express.Multer.File;
+
+    mime_type: string;
+
+    size: number;
+
+    original_name: string;
+
+    highlight: any
+
+    path: string;
 }

@@ -8,3 +8,5 @@
 /src/.env
 .env
 /package-lock.json
+/uploads/
+/images/
