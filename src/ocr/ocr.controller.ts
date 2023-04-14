@@ -19,14 +19,13 @@ export class OcrController {
     )
     upload(@UploadedFile() file: Express.Multer.File) {
         let imageDto = new ImageDto();
-        imageDto.file = file;
         imageDto.image_name = file.filename;
         imageDto.original_name = file.originalname;
         imageDto.mime_type = file.mimetype;
         imageDto.size = file.size;
         imageDto.path = file.path;
 
-        return this.orcService.upload(imageDto);
+        return imageDto;
     }
 
     @Get('images/:imageId')
