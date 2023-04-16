@@ -8,6 +8,17 @@ import axios from "axios";
 const fs = require("fs");
 
 export class OCRService {
+    upload(file: Express.Multer.File) {
+        let imageDto = new ImageDto();
+        imageDto.image_name = file.filename;
+        imageDto.original_name = file.originalname;
+        imageDto.mime_type = file.mimetype;
+        imageDto.size = file.size;
+        imageDto.path = file.path;
+
+        return imageDto;
+    }
+
     async hightlight(imageDto: ImageDto) {
         const filePath = join(process.cwd(), AppConstants.STORAGE_PATH + imageDto.image_name);
         if (!fs.existsSync(filePath)) {
