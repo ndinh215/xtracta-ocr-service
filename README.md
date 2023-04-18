@@ -53,7 +53,7 @@ Run command:
 $ docker-compose -f ./docker-compose.microservices.yml up --build
 ```
 
-Traefik admin link: http://localhost:80
+Traefik admin link: http://localhost:8080
 
 Service link: http://api.xtracta.local
 
